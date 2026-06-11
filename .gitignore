@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Data files (large)
+data/*.csv
+data/*.json
+outputs/*.csv
+outputs/*.json
+
+# Results (regeneratable)
+results/
+plots/
+human_evaluation/*.xlsx
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+pipeline.log
+
+# Checkpoints
+*checkpoint*.json
