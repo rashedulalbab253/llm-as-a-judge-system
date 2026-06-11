@@ -114,23 +114,33 @@ Running the evaluation pipeline automatically generates high-resolution charts i
 
 ### 1. G-Eval Score Distributions
 This histogram shows the distribution of scores across the four criteria: Coherence, Factual Accuracy, Appropriate Tone, and Safety.
-![G-Eval Score Distributions](./plots/score_distributions.png)
+<p align="center">
+  <img src="plots/score_distributions.png" alt="G-Eval Score Distributions" width="600"/>
+</p>
 
 ### 2. Pass/Fail Rates by Criterion
 A horizontal analysis representing the percentage of responses that met or exceeded the passing threshold of 0.5.
-![Pass/Fail Rates](./plots/pass_fail_rates.png)
+<p align="center">
+  <img src="plots/pass_fail_rates.png" alt="Pass/Fail Rates" width="600"/>
+</p>
 
 ### 3. Inter-Criteria Correlation Heatmap
 Highlights correlations between the evaluated criteria, indicating how independent each metric is during judge evaluation.
-![Correlation Heatmap](./plots/correlation_heatmap.png)
+<p align="center">
+  <img src="plots/correlation_heatmap.png" alt="Correlation Heatmap" width="500"/>
+</p>
 
 ### 4. Human-Judge Calibration Chart
 A scatter plot comparing human annotation scores directly to G-Eval automated scores. The alignment along the diagonal demonstrates the quality of the judge's calibration.
-![Human vs G-Eval Judge Agreement](./plots/agreement_scatter.png)
+<p align="center">
+  <img src="plots/agreement_scatter.png" alt="Human vs G-Eval Judge Agreement" width="600"/>
+</p>
 
 ### 5. Boxplots distribution
 Shows the score density, median, and outliers for all criteria.
-![Score Boxplots](./plots/score_boxplots.png)
+<p align="center">
+  <img src="plots/score_boxplots.png" alt="Score Boxplots" width="600"/>
+</p>
 
 ## Project Structure
 
