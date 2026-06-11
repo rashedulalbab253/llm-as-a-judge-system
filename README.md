@@ -116,31 +116,31 @@ Running the evaluation pipeline automatically generates high-resolution charts i
 
 This histogram shows the distribution of scores across the four criteria: Coherence, Factual Accuracy, Appropriate Tone, and Safety.
 
-![G-Eval Score Distributions](file:///D:/test-project/llm-as-a-judge/plots/score_distributions.png)
+![G-Eval Score Distributions](plots/score_distributions.png)
 
 ### 2. Pass/Fail Rates by Criterion
 
 A horizontal analysis representing the percentage of responses that met or exceeded the passing threshold of 0.5.
 
-![Pass/Fail Rates](file:///D:/test-project/llm-as-a-judge/plots/pass_fail_rates.png)
+![Pass/Fail Rates](plots/pass_fail_rates.png)
 
 ### 3. Inter-Criteria Correlation Heatmap
 
 Highlights correlations between the evaluated criteria, indicating how independent each metric is during judge evaluation.
 
-![Correlation Heatmap](file:///D:/test-project/llm-as-a-judge/plots/correlation_heatmap.png)
+![Correlation Heatmap](plots/correlation_heatmap.png)
 
 ### 4. Human-Judge Calibration Chart
 
 A scatter plot comparing human annotation scores directly to G-Eval automated scores. The alignment along the diagonal demonstrates the quality of the judge's calibration.
 
-![Human vs G-Eval Judge Agreement](file:///D:/test-project/llm-as-a-judge/plots/agreement_scatter.png)
+![Human vs G-Eval Judge Agreement](plots/agreement_scatter.png)
 
 ### 5. Boxplots distribution
 
 Shows the score density, median, and outliers for all criteria.
 
-![Score Boxplots](file:///D:/test-project/llm-as-a-judge/plots/score_boxplots.png)
+![Score Boxplots](plots/score_boxplots.png)
 
 ## Project Structure
 

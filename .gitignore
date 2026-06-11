@@ -17,7 +17,6 @@ outputs/*.json
 
 # Results (regeneratable)
 results/
-plots/
 human_evaluation/*.xlsx
 
 # IDE
