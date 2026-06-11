@@ -180,4 +180,4 @@ All settings are centralized in `config.py`:
 
 ## License
 
-MIT
+MIT License - Copyright (c) 2026 Rashedul Albab
