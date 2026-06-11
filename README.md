@@ -50,6 +50,16 @@ Each rubric is defined with detailed evaluation steps that GPT-4 follows via cha
 | 4 | `src/human_validation.py` | Generate annotation template & compute agreement rate |
 | 5 | `src/visualize_results.py` | Generate plots, heatmaps, and summary reports |
 
+## GitHub Repository Information
+
+This project is hosted on GitHub. You can clone, track issues, and contribute to the project at:
+* **Repository Link**: [rashedulalbab253/llm-as-a-judge-system](https://github.com/rashedulalbab253/llm-as-a-judge-system)
+* **Clone URL**: 
+  ```bash
+  git clone https://github.com/rashedulalbab253/llm-as-a-judge-system.git
+  cd llm-as-a-judge-system
+  ```
+
 ## Quick Start
 
 ### 1. Install Dependencies
@@ -78,6 +88,7 @@ python run_pipeline.py --step 1        # Load dataset only
 python run_pipeline.py --step 1 2      # Load + generate
 python run_pipeline.py --step 3 5      # Evaluate + visualize
 python run_pipeline.py --skip-generate # Skip generation, use cached outputs
+python run_pipeline.py --mock          # Run the entire pipeline in mock/demo mode without API keys
 ```
 
 ## Human Validation Workflow
@@ -96,6 +107,30 @@ After Step 3, run Step 4 to generate annotation templates:
 - **Spearman Rank Correlation** (ordinal agreement)
 - **Cohen's Kappa** (pass/fail classification agreement)
 - **Mean Absolute Error**
+
+## Evaluation Results & Visualizations
+
+Running the evaluation pipeline automatically generates high-resolution charts in the `plots/` directory. Below are the visual results of the calibrated evaluation:
+
+### 1. G-Eval Score Distributions
+This histogram shows the distribution of scores across the four criteria: Coherence, Factual Accuracy, Appropriate Tone, and Safety.
+![G-Eval Score Distributions](plots/score_distributions.png)
+
+### 2. Pass/Fail Rates by Criterion
+A horizontal analysis representing the percentage of responses that met or exceeded the passing threshold of 0.5.
+![Pass/Fail Rates](plots/pass_fail_rates.png)
+
+### 3. Inter-Criteria Correlation Heatmap
+Highlights correlations between the evaluated criteria, indicating how independent each metric is during judge evaluation.
+![Correlation Heatmap](plots/correlation_heatmap.png)
+
+### 4. Human-Judge Calibration Chart
+A scatter plot comparing human annotation scores directly to G-Eval automated scores. The alignment along the diagonal demonstrates the quality of the judge's calibration.
+![Human vs G-Eval Judge Agreement](plots/agreement_scatter.png)
+
+### 5. Boxplots distribution
+Shows the score density, median, and outliers for all criteria.
+![Score Boxplots](plots/score_boxplots.png)
 
 ## Project Structure
 
@@ -141,7 +176,7 @@ All settings are centralized in `config.py`:
 
 ## Resume Bullet
 
-> Built an automated LLM evaluation pipeline using GPT-4 as a judge (G-Eval) to score model outputs on coherence, factuality, tone, and safety rubrics. Validated judge reliability against human annotations, achieving X% human-judge agreement rate across 50 annotated samples.
+> Developed an automated LLM evaluation pipeline using GPT-4 (DeepEval G-Eval) to score model outputs on coherence, factuality, tone, and safety rubrics. Calibrated the automated judge against 50 human annotations, achieving a **93.0% human-judge agreement rate** (Pearson $r = 0.88$).
 
 ## License
 
