@@ -174,9 +174,6 @@ All settings are centralized in `config.py`:
 - **OpenAI GPT-4** — Judge model with chain-of-thought reasoning
 - **OpenAI GPT-3.5-Turbo** — Weak model under evaluation
 
-## Resume Bullet
-
-> Developed an automated LLM evaluation pipeline using GPT-4 (DeepEval G-Eval) to score model outputs on coherence, factuality, tone, and safety rubrics. Calibrated the automated judge against 50 human annotations, achieving a **93.0% human-judge agreement rate** (Pearson $r = 0.88$).
 
 ## License
 
